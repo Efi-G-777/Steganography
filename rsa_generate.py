@@ -1,4 +1,4 @@
-from sympy import gcd, mod_inverse
+from sympy import mod_inverse
 from config import *
 import random
 
