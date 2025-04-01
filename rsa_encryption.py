@@ -4,6 +4,7 @@ def get_ord(character):
         char_ord = "0" + char_ord
     return char_ord
 
+
 BLOCK_SIZE = 2
 
 
