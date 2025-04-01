@@ -13,14 +13,15 @@ def rsa_encrypt(text, key):
     padding_length = BLOCK_SIZE - length % BLOCK_SIZE if length % BLOCK_SIZE != 0 else 0
     text = text + (pad * padding_length)
     len_message = len(text)
-    out = ""
+    out = []
     for i in range(0 , len_message - 1, BLOCK_SIZE):
         block_ord = ""
         for j in range(i, i + BLOCK_SIZE):
             char_ord = get_ord(text[j])
             block_ord += char_ord
-        new_char = pow(int(block_ord), key[0], key[1])
-        out = " ".join([out, str(new_char)])
+        new_char = str(pow(int(block_ord), key[0], key[1]))
+        out.append(new_char)
+    out = " ".join(out)
     return out
 
 def rsa_decrypt(enc_text, key):

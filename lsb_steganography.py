@@ -87,5 +87,5 @@ out_path = "/home/mefathim-77/Documents/deciphered"
 
 
 # encode_image(img_path, text_path, enc_path)
-# decode_image(enc_path, out_path)
+decode_image(enc_path, out_path)
 
